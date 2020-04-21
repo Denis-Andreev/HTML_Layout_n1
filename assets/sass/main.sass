@@ -1,0 +1,280 @@
+@import "compotents.sass"
+@import "typography.sass"
+@import "constants.sass"
+body
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+.container
+	padding: 0 20%
+section 
+	padding: 5rem 0
+a
+	text-decoration: none
+	color: inherit
+
+// HEADER
+header
+	background: url("../img/header-bg.png") no-repeat
+	background-size: cover
+	padding: 5rem 0
+	text-align: left
+	.logo
+		margin-right: auto
+.wrap
+	display: flex
+	flex-direction: row
+	margin-left: auto
+	flex-wrap: wrap
+	align-items: center
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		display: flex
+		flex-direction: row
+		margin-right: 1.5rem
+		li
+			transition: 0.3s
+			margin-right: 1rem
+			padding: 1rem 0
+			border-bottom: 1px solid transparent
+		li:hover
+			color: $primary-color
+			border-bottom: 1px solid $primary-color
+
+nav
+	padding: 1.5rem 0
+	background-color: #252222
+	.container
+		height: 100%
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+.social-media a
+		margin-right: 0.3rem
+
+// PORTFOLIO
+.portfolio
+	background-color: $primary-color
+	h1
+		margin-bottom: 0
+.portfolio__gallery
+	margin: 3rem 0 0
+	width: 100%
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+.gallery__item:hover .gallery__item__content
+	opacity: 1
+	top: 0
+	background-color: rgba(101, 186, 153, .7)
+.gallery__item
+	position: relative
+	overflow: hidden
+	&__picture
+		height: 16rem
+		width: 100%
+		object-fit: cover
+		float: left
+	&__content
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			height: 100%
+			display: flex
+			opacity: 0
+			transition: .5s
+			flex-direction: column
+			justify-content: flex-end
+			align-items: center
+			.social-media
+				margin: 5.5rem 1rem 0 1rem
+				// margin-top: 50%
+				// margin-bottom: 1rem
+
+// BLOCKQOUTE
+.blockquote
+	background: url("../img/blockquote-bg.jpg") no-repeat
+	background-size: cover
+	&__text
+		font-size: 1.85rem
+	&__text:before
+			content: "\201C"
+	&__text:after
+		content: "\201E"
+		transform: rotate(180deg)
+	&__author
+		float: right
+		font-size: 1.15rem
+	&__author:before
+		content: "- "
+	&__author:after
+		content: " -"
+
+// NEWS
+article
+		width: 45%
+		min-width: 300px
+.news
+	.container
+		font-family: sans-serif
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+	&__wrap
+		margin-right: 1rem
+		display: flex
+		flex-direction: column
+		text-align: left
+		width: 50%
+		min-width: 300px
+	h1
+		display: block
+	&__item
+		&__header
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: flex-end
+			flex-wrap: wrap
+			margin: 2rem 0 .5rem 0
+		&__title // 16px
+			color: $primary-color-dark
+			font-weight: bold
+			text-transform: none
+		&__picture
+			margin: .5rem 0
+		&__picture img
+			width: 100%
+			height: auto
+		&__text
+			color: #676767
+		a.read_more
+			font-size: .8rem
+			float: right
+			color: $secondary-color
+		a.read_more:after
+			display: inline-block
+			content: "\27A4"
+			text-align: right
+			width: 1.5rem
+	&__data
+		background-color: $primary-color-dark
+		padding: .2rem 2rem
+		color: white
+		margin-right: 1rem
+	&__tag
+		color: $secondary-color
+		font-style: italic
+	&__tag:before
+		content: " "
+		position: relative
+		vertical-align: middle
+		display: inline-block
+		margin-right: 1rem
+		width: 1em
+		height: 1em
+		background: url("../img/news__photos/tag-icon.png") no-repeat
+		background-position: center
+	&__tags
+		&__title
+		&_list
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+.tags__list__item
+	display: inline-block
+	margin-right: .2rem
+	color: white
+	font-size: .9rem
+	margin-top: .6rem
+	background-color: $primary-color-dark
+	padding: .2rem 1rem
+	text-align: center
+.tags__list__item:hover
+	background-color: $secondary-color
+	color: black
+span.from
+	color: #676767
+	font-style: italic
+.news__sameNewsByTags
+	margin: 3rem 0
+.same__news__item
+	margin: 1rem 0
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: flex-start
+.same__news__text
+	width: 60%
+	min-width: 300px
+.same__news__picture
+	width: 5rem
+	height: 5rem
+	margin-right: 1rem
+	border-radius: .5rem
+	margin-bottom: 1rem
+	overflow: hidden
+	background-color: #676767
+.same__news__data
+	color: $secondary-color
+
+// PARNERS
+.partners
+	background-color: #bebebe
+	padding: 2rem 0
+	.container
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		img
+			margin: 2rem
+// BIOGRAPHY
+.biography
+	background-color: $secondary-color
+	text-align: center
+	.container
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-start
+		flex-wrap: wrap
+	&__card
+		width: 30%
+		display: flex
+		flex-direction: column
+		min-width: 310px
+		align-items: center
+		.avatar
+			display: block
+			width: 80%
+			height: auto
+			margin: 2rem 0
+	&__info
+		width: 60%
+		text-align: left
+		min-width: 310px
+
+// FOOTER
+footer
+	background: url("../img/footer-bg.jpg") no-repeat
+	background-size: cover
+	text-align: center
+	padding-bottom: 1rem
+	.container
+		padding: 3rem 0
+		display: flex
+		flex-direction: column
+		.email
+			display: inline-block
+			padding: .4rem 5rem
+			margin: .8rem 0
+			border: .2rem solid white
+@import "media.sass"
